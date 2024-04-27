@@ -2,11 +2,11 @@
     <form class="range">
       <div class="form-group range__slider">
         <input type="range" step="10">
-      </div><!--/form-group-->
+      </div>
       <div class="form-group range__value">
         
         <span></span>            
-      </div><!--/form-group-->
+      </div>
     </form>
     <style>
         body {
@@ -72,7 +72,7 @@
   margin: 0;
 }
 
-/* custom thumb */
+
 .range__slider [type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -105,7 +105,7 @@
   background: #0033ff;
 }
 
-/* remove border */
+
 input::-moz-focus-inner, input::-moz-focus-outer {
   border: 0;
 }
@@ -117,12 +117,12 @@ input::-moz-focus-inner, input::-moz-focus-outer {
     this.valueElement = valueElement
     this.options = options
 
-    // Attach a listener to "change" event
+    
     this.rangeElement.addEventListener('input', this.updateSlider.bind(this))
   }
 
 
-  // Initialize the slider
+  
   init() {
     this.rangeElement.setAttribute('min', options.min)
     this.rangeElement.setAttribute('max', options.max)
@@ -131,7 +131,7 @@ input::-moz-focus-inner, input::-moz-focus-outer {
     this.updateSlider()
   }
 
-  // Format the money
+ 
   asMoney(value) {
     return '' + parseFloat(value)
       .toLocaleString('en-US', { maximumFractionDigits: 2 })
@@ -167,4 +167,4 @@ if (rangeElement) {
   slider.init()
 }
     </script>
-  </div><!--/container-->
+  </div>
